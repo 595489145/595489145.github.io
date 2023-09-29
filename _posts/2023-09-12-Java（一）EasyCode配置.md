@@ -8,6 +8,7 @@ tag: [Java, EasyCode, Mybatis]
 ---
 
 {:toc}
+
 # EasyCode插件下载
 easycode可以自动生成数据库entity、mapper等文件
 从idea的Setting->Plugins里寻找easycode,下载
