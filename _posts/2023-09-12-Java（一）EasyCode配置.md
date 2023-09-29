@@ -7,7 +7,8 @@ description:
 tag: [Java, EasyCode, Mybatis]
 ---
 
-@[TOC](EasyCode配置)
+any list
+{:toc}
 # EasyCode插件下载
 easycode可以自动生成数据库entity、mapper等文件
 从idea的Setting->Plugins里寻找easycode,下载
@@ -197,9 +198,9 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/service/Impl"))
 从idea的侧导航栏查找Database，输入账号密码、使用的表等信息进行连接
 
 ## 生成代码
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e2dc142e968d484f8b9f59871c72575d.png)
+![easycode位置](https://img-blog.csdnimg.cn/e2dc142e968d484f8b9f59871c72575d.png)
 右键表名->EasyCode->Generate Code
-![在这里插入图片描述](https://img-blog.csdnimg.cn/007b08c8a56b4f0ea8f928f1a29d66e3.png)
+![easycode注释](https://img-blog.csdnimg.cn/007b08c8a56b4f0ea8f928f1a29d66e3.png)
 结束。
 
 

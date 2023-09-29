@@ -44,6 +44,7 @@ paginate_path: /page:num/
 
 # Build settings
 markdown: kramdown
+toc_levels: 1……2
 plugins_dir:
   - jekyll-paginate
   - jekyll-sitemap
@@ -54,3 +55,7 @@ gems:
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+
+# 目录
+
