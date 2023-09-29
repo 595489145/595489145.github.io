@@ -7,8 +7,7 @@ description:
 tag: [Java, EasyCode, Mybatis]
 ---
 
-any list
-{:toc}
+any list {:toc}
 # EasyCode插件下载
 easycode可以自动生成数据库entity、mapper等文件
 从idea的Setting->Plugins里寻找easycode,下载
@@ -43,7 +42,7 @@ blog
 从Setting侧边栏找EasyCode->Template
 
 **1.entity.java.vm**
-```java
+```
 ##导入宏定义
 $!{define.vm}
 
@@ -85,7 +84,7 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/domain/entity"))
 ```
 
 **2.mapper.java.vm**
-```java
+```
 ##导入宏定义
 $!{define.vm}
 
@@ -117,7 +116,7 @@ public interface $!{tableName} extends BaseMapper<$!tableInfo.name> {
 $!callback.setSavePath($tool.append($tableInfo.savePath, "/mapper"))
 ```
 3.service.java.vm
-```java
+```
 ##导入宏定义
 $!{define.vm}
 
@@ -198,7 +197,7 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/service/Impl"))
 从idea的侧导航栏查找Database，输入账号密码、使用的表等信息进行连接
 
 ## 生成代码
-![easycode位置](https://img-blog.csdnimg.cn/e2dc142e968d484f8b9f59871c72575d.png)
+![easycode位置](https://www.vcg.com/creative/811557570)
 右键表名->EasyCode->Generate Code
 ![easycode注释](https://img-blog.csdnimg.cn/007b08c8a56b4f0ea8f928f1a29d66e3.png)
 结束。
