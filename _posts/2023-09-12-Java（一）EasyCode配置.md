@@ -7,7 +7,8 @@ description:
 tag: [Java, EasyCode, Mybatis]
 ---
 
-{:toc}
+* 目录 
+{:toc} 
 
 # EasyCode插件下载
 easycode可以自动生成数据库entity、mapper等文件
