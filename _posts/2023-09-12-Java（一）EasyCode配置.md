@@ -7,7 +7,7 @@ description:
 tag: [Java, EasyCode, Mybatis]
 ---
 
-any list {:toc}
+{:toc}
 # EasyCode插件下载
 easycode可以自动生成数据库entity、mapper等文件
 从idea的Setting->Plugins里寻找easycode,下载
@@ -149,7 +149,7 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/service"))
 
 **4.serviceImpl.java.vm**
 
-```java
+```
 ##导入宏定义
 $!{define.vm}
 
