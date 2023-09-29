@@ -3983,6 +3983,7 @@ cite {
 #banner .content .title {
   font-size: 3.5rem;
   margin: 0 0 1rem 0;
+  color: black; /* 添加文本颜色为黑色 */
 }
 
 #banner .content .sub_title {
@@ -3991,6 +3992,7 @@ cite {
   margin: 0 auto 2rem auto;
   line-height: 2.5rem;
   font-style: italic;
+  color: black; /* 添加文本颜色为黑色 */
 }
 
 .chapters {
@@ -4920,5 +4922,6 @@ ul#markdown-toc {
 padding: 1rem;
   font-size: 2rem;
   margin: 0;
+  background-color: rgba(220, 220, 220, 0.8);
   color: #ffffff;
 }
