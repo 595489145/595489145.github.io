@@ -3,7 +3,10 @@ layout: post
 title: "Java（一）EasyCode配置"
 catalog: true
 header-style: text
-tag: [Java, EasyCode, Mybatis]
+tag: 
+    - Java
+    - MyBatis
+    - Easycode
 ---
 # EasyCode插件下载
 easycode可以自动生成数据库entity、mapper等文件
