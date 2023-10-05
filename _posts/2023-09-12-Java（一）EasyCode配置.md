@@ -1,15 +1,10 @@
 ---
 layout: post
 title: "Java（一）EasyCode配置"
-img: mybatis.png # Add image post (optional)
-date: 2023-09-12 12:55:00 +0300
-description: 
+catalog: true
+header-style: text
 tag: [Java, EasyCode, Mybatis]
 ---
-
-* 目录 
-{:toc} 
-
 # EasyCode插件下载
 easycode可以自动生成数据库entity、mapper等文件
 从idea的Setting->Plugins里寻找easycode,下载
