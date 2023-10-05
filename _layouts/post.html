@@ -1,92 +1,173 @@
 ---
 layout: default
 ---
-{% include header.html %}
 
-<main class="post_content">
-  <article class="post">
-    <header>
-      <div class="post_image">
-        <img src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}} alt="{{page.title}}">
-      </div>
-      <div class="post_description">
-        <p class="post_meta">{{page.date | date: '%Y, %b %d'}}</p>
-        <h1 class="post_title">{{page.title}}</h1>
-      </div>
-    </header> <!-- End Header -->
+<!-- Image to hack wechat -->
+<!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
 
-    <div class="entry_content">
-      {{page.content | markdownify}}
-    </div>
-    
-    <div class="post_wrapper">
-      <footer class="post_footer cf">
-        <div class="post_share">
-          <span>Share:</span>
-          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+<!-- Post Header -->
+{% include intro-header.html type='post' %}
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <!-- Multi-Lingual -->
+                {% if page.multilingual %}
+                    {% include multilingual-sel.html %}
+                {% endif %}
+
+				{{ content }}
+
+                <hr style="visibility: hidden;">
+                <ul class="pager">
+                    {% if page.previous.url %}
+                    <li class="previous">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
+                        Previous<br>
+                        <span>{{page.previous.title}}</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <li class="next">
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
+                        Next<br>
+                        <span>{{page.next.title}}</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <hr style="visibility: hidden;">
+
+                {% if site.disqus_username %}
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                {% endif %}
+
+                {% if site.netease_comment %}
+                <!-- 网易云跟帖 评论框 start -->
+                <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+                <!-- 网易云跟帖 评论框 end -->
+                {% endif %}
+            </div>  
+
+    <!-- Side Catalog Container -->
+        {% unless page.no-catalog %}
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+        {% endunless %}
+
+    <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                {% include featured-tags.html bottom=true %}
+
+                <!-- Friends Blog -->
+                {% include friends.html %}
+            </div>
         </div>
-        <div class="post_tag">
-          <span>Tags:</span>
-          {% for tag in page.tags %}
-          <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">{{ tag }}</a>
-          {% endfor %}
-        </div>
-      </footer>
     </div>
-  </article> <!-- End Section Post -->
+</article>
 
-  <section class="author cf">
-    <div class="post_wrapper">
-      <div class="author_image">
-        <img src="{{site.baseurl}}/assets/img/{% if site.author-pic %}{{ site.author-pic }}{% endif %}" alt="Author face">
-      </div>
-      <div class="author_info">
-        <h2 class="author_title">{% if site.author-name %}{{site.author-name}}{% else %}Dwayne Newman{% endif %}</h2>
-        <p class="author_subtitle">{% if site.about-author %}{{site.about-author}}{% else %}La croix godard blue bottle, vape iceland fingerstache cronut single-origin coffee lyft snackwave normcore small batch.{% endif %}</p>
-        <div class="author_social">
-          {% if site.email %}
-          <span class="author_email"><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:{{site.email}}">{{site.email}}</a></span>
-          {% else %}
-          <span class="author_email"><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:dwayne@example.com">dwayne@example.com</a></span>
-          {% endif %}
-          
-          {% if site.phone %}
-          <span class="author_phone"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:{{site.phone}}">{{site.phone}}</a></span>
-          {% else %}
-          <span class="author_phone"><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+496-169-65-57">(496)-169-6557</a></span>
-          {% endif %}
+<!-- add support for mathjax by voleking-->
+{% if page.mathjax %}
+  {% include mathjax_support.html %}
+{% endif %}
 
-          {% if site.website %}
-          <span class="author_website"><i class="fa fa-link" aria-hidden="true"></i> <a href="{{site.website}}" target="_blank">{{site.website}}</a></span>
-          {% else %}
-          <span class="author_website"><i class="fa fa-link" aria-hidden="true"></i> <a href="#" target="_blank">https://dwayne.example.com</a></span>
-          {% endif %}            
-        </div>
-      </div>
-    </div>
-  </section> <!-- End Section Author -->
+{% if site.netease_comment %}
+<!-- 网易云跟帖JS代码 start -->
+<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+<script>
+  var cloudTieConfig = {
+    url: document.location.href, 
+    sourceId: "",
+    productKey: "de25fc98a6fe48b3bc8a7ae765da99a0",
+    target: "cloud-tie-wrapper"
+  };
+  var yunManualLoad = true;
+  Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+</script>
+<!-- 网易云跟帖JS代码 end -->
+{% endif %}
 
-  <section class="recent_box">
-    <div class="post_wrapper">
-      <h2 class="recent_title">Recent post</h2>
-      <div class="recent_list">
-        {% for post in site.posts offset:0 limit:6 %}
-          {% if post.title %}
-            <a href="{{ post.url | prepend: site.baseurl }}"
-              class="recent_item"
-              style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
-                <span>{{ post.title }}</span>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section> <!-- End Section Recent Box -->
-  
-  {% include disqus.html %}
-  
-</main> <!-- End Section Post Content -->
 
-{% include footer.html %}
+{% if site.disqus_username %}
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{page.id}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
+
+
+{% if site.anchorjs %}
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'right',
+          // icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+{% endif %}
