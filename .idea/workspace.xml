@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81083615-3079-460c-b25c-04851fc190c3" name="Changes" comment="修改图标及内容">
-      <change afterPath="$PROJECT_DIR$/_posts/2022-12-29-解决论文提交时IEEE PDF eXpress通过但提交系统提示字体未嵌入的问题.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2023-04-18-Matlab（二）Linux下matlab与python交互.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2023-04-18-Python（一）Tensorflow知识点归纳.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2023-04-18-Python（二）多线程.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2023-05-15-Matlab（一）Linux无图形界面安装matlab（正版）.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2023-05-30-Java（二）Java并发编程.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2023-06-01-Linux（三）inux安装Pycharm、IDEA.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2023-10-05-Linux（二）树莓派（linux）安装scipy.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/EasyCodeConfig/007b08c8a56b4f0ea8f928f1a29d66e3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/EasyCodeConfig/e2dc142e968d484f8b9f59871c72575d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/IEEEPDFEXpress/adobe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/IEEEPDFEXpress/voltage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Linux下matlab与python交互/版本.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Linux安装Matlab/安装说明.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Linux安装Matlab/安装路径.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Linux安装Matlab/获取许可证1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Linux安装Matlab/获取许可证2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/Linux安装Matlab/运行效果.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/树莓派安装scipy/报错.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/树莓派安装scipy/系统型号.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2023-09-12-Java（一）EasyCode配置.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2023-05-22-Java（一）EasyCode配置.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2099-09-01-[置顶]关于我为什么新建博客网站.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2099-09-01-[置顶]关于我为什么新建博客网站.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/archive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/bg-me-2022.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/bg-me-2022.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/home-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/home-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="81083615-3079-460c-b25c-04851fc190c3" name="Changes" comment="新增csdn博客" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -332,7 +301,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696568600322</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="新增csdn博客">
+      <created>1696601262043</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1696601262043</updated>
+    </task>
+    <task id="LOCAL-00034" summary="新增csdn博客">
+      <created>1696601296368</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1696601296368</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -385,7 +368,8 @@
     <MESSAGE value="blog4" />
     <MESSAGE value="test" />
     <MESSAGE value="修改图标及内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改图标及内容" />
+    <MESSAGE value="新增csdn博客" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增csdn博客" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>
