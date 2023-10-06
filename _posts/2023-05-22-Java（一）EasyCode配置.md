@@ -8,13 +8,13 @@ tag:
     - MyBatis
     - Easycode
 ---
-# EasyCode插件下载
+## EasyCode插件下载
 easycode可以自动生成数据库entity、mapper等文件
 从idea的Setting->Plugins里寻找easycode,下载
 
 
-# 编辑EasyCode模板
-## 框架结构
+## 编辑EasyCode模板
+### 框架结构
 首先需要确定自己框架的结构，以便确定包的位置
 ```linux
 blog
@@ -38,7 +38,7 @@ blog
     │  │  │          │  └─Impl
 ```
 我这里是controller层单独放到一个模块，entity,mapper和service放到通用模块中，生成时只生成通用模块的代码。
-## 模板
+### 模板
 从Setting侧边栏找EasyCode->Template
 
 **1.entity.java.vm**
@@ -63,7 +63,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 ##表注释（宏定义）
 #tableComment("表实体类")
-## 表原始名
+### 表原始名
 @TableName("$!{tableInfo.obj.name}")
 @Data
 @AllArgsConstructor
@@ -88,7 +88,7 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/domain/entity"))
 ##导入宏定义
 $!{define.vm}
 
-## 不设置package,从模板定死
+### 不设置package,从模板定死
 #set($MyPackagePath= "com.guabby")
 
 
@@ -120,7 +120,7 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/mapper"))
 ##导入宏定义
 $!{define.vm}
 
-## 不设置package,从模板定死
+### 不设置package,从模板定死
 #set($MyPackagePath= "com.guabby")
 
 
@@ -153,7 +153,7 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/service"))
 ##导入宏定义
 $!{define.vm}
 
-## 不设置package,从模板定死
+### 不设置package,从模板定死
 #set($MyPackagePath= "com.guabby")
 
 ##设置表后缀（宏定义）
@@ -183,8 +183,8 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/service/Impl"))
 
 ```
 
-# 根据数据库生成
-## 导入数据库驱动
+## 根据数据库生成
+### 导入数据库驱动
 ```xml
 <!--mysql数据库驱动-->
         <dependency>
@@ -193,13 +193,13 @@ $!callback.setSavePath($tool.append($tableInfo.savePath, "/service/Impl"))
             <version>8.0.25</version>
         </dependency>
 ```
-## 链接数据库
+### 链接数据库
 从idea的侧导航栏查找Database，输入账号密码、使用的表等信息进行连接
 
-## 生成代码
-![easycode位置](https://www.vcg.com/creative/811557570)
+### 生成代码
+![easycode位置](/img/EasyCodeConfig/e2dc142e968d484f8b9f59871c72575d.png)
 右键表名->EasyCode->Generate Code
-![easycode注释](https://img-blog.csdnimg.cn/007b08c8a56b4f0ea8f928f1a29d66e3.png)
+![easycode注释](/img/EasyCodeConfig/007b08c8a56b4f0ea8f928f1a29d66e3.png)
 结束。
 
 
