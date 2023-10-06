@@ -1,12 +1,10 @@
 ---
 layout: post
-
-[//]: # (title: "Java（二）Java并发编程")
+titile: "Linux（三）Linux安装Pycharm、IDEA"
 catalog: true
 header-style: text
 tag: 
-    - Java
-    - 多线程
+    - Linux
 ---
 
 以pycharm社区版为例，IDEA安装过程同理，pycharm专业版可能更繁琐些，我用社区版就够了
