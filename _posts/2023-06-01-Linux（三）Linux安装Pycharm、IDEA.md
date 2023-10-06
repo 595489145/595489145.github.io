@@ -1,6 +1,6 @@
 ---
 layout: post
-titile: "Linux（三）Linux安装Pycharm、IDEA"
+title: "Linux（三）Linux安装Pycharm、IDEA"
 catalog: true
 header-style: text
 tag: 

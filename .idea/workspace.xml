@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81083615-3079-460c-b25c-04851fc190c3" name="Changes" comment="新增csdn博客">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2023-06-01-Linux（三）Linux安装Pycharm、IDEA.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2023-06-01-Linux（三）Linux安装Pycharm、IDEA.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -325,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696601743291</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="新增csdn博客">
+      <created>1696601867762</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1696601867762</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
